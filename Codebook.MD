@@ -9,17 +9,17 @@ Mitchell O'Neill: March 2015
 2. A tidy dataset which displays only the average mean and std for each activity by each subject. TidyMeans (180 obs, 81 variables)
 
 ##Inorder to create dataset 1 the following actions were performed:
-*The data from both the test and train dataset subfolders(for subject number, activity number and recorded output) are read into seperate data.frames: TrainData, TestData, TrainAct, TestAct, Train Suject, Test Subject
-*The stored data from above are combined into 2 data.frames for FullTest and FullTrain
-*The Activity and Feature files are read into data.frames: ActLables and ColNames
-*The Feature(ColNames) data.frame is coerced to make the names more readable for R and then attached as column names to FullTest and FullTrain data.frames
-*The two data.sets are combined by row into a data.frame "FullData"
-*An index is created that lists the column numbers of the FullData data.frame that relate to recored mean and standard deviation values
-*The index is used to subset "FullData" into a data.frame called "MeanStdData" that only inlcudes the indexed columns
-*A for loop is used to replace all the numbered activity indicators with the names from the ActLables data.frame
+* The data from both the test and train dataset subfolders(for subject number, activity number and recorded output) are read into seperate data.frames: TrainData, TestData, TrainAct, TestAct, Train Suject, Test Subject
+* The stored data from above are combined into 2 data.frames for FullTest and FullTrain
+* The Activity and Feature files are read into data.frames: ActLables and ColNames
+* The Feature(ColNames) data.frame is coerced to make the names more readable for R and then attached as column names to FullTest and FullTrain data.frames
+* The two data.sets are combined by row into a data.frame "FullData"
+* An index is created that lists the column numbers of the FullData data.frame that relate to recored mean and standard deviation values
+* The index is used to subset "FullData" into a data.frame called "MeanStdData" that only inlcudes the indexed columns
+* A for loop is used to replace all the numbered activity indicators with the names from the ActLables data.frame
 
 ##Inorder to create dataset 2 the following actions were performed:
-*The MeanStdData data.frame is grouped first by Subject then Activity and finally summarised with the Mean function into a new data.frame: TidyMeans
+* The MeanStdData data.frame is grouped first by Subject then Activity and finally summarised with the Mean function into a new data.frame: TidyMeans
 
 
 ##The variables for these two Data.Frames are as follows:
@@ -106,7 +106,7 @@ Mitchell O'Neill: March 2015
 81.	fBodyBodyGyroJerkMag.meanFreq
 
 Within the variable names there are several reoccuring values:
-*mean: Mean value
-*std: Standard deviation
-*meanFreq: Weighted average of the frequency components to obtain a mean frequency
-*X,Y,Z: Used to denote 3-axial signals in the X, Y and Z directions.
+* mean: Mean value
+* std: Standard deviation
+* meanFreq: Weighted average of the frequency components to obtain a mean frequency
+* X,Y,Z: Used to denote 3-axial signals in the X, Y and Z directions.
